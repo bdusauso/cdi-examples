@@ -6,7 +6,7 @@ import jakarta.inject.Named;
 public class AppApiFactory {
     @Produces
     @Named("AppApi")
-    public AppApi getAppApi(@Named("Environment") String environment) {
+    public AppApi getAppApi(@CdisEnvironment String environment) {
         return new AppApi(environment);
     }
 }

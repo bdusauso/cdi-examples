@@ -4,8 +4,8 @@ import jakarta.enterprise.inject.Produces;
 import jakarta.inject.Named;
 
 public class EnvironmentFactory {
+    @CdisEnvironment
     @Produces
-    @Named("Environment")
     public String getEnvironment() {
         return "DEV";
     }
